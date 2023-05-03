@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound
+from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 
 monthly_challenges = {
     'january':'January connected',
@@ -18,8 +18,14 @@ monthly_challenges = {
 # Create your views here.
 
 def monthly_challenge_by_number(request, month):
-    return HttpResponse(month)
-
+    # as the dictionary is sorted in python, we get the keys into a list
+    months = list(monthly_challenges.keys())
+    # then the month for the given int:month index in the previus sorted list
+    redirect_month = months[month]
+    
+    return HttpResponseRedirect('/challenges/' + redirect_month)
+    # HttpResponseRedirect: You can visit it but actually is not the final real 
+    # url, you should be, here is that real url
 
 def monthly_challenge(request, month):
     challenge_text = monthly_challenges[month]
