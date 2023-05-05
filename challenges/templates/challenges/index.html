@@ -4,11 +4,10 @@
 All challenges
 {% endblock %}
 
-
 {% block content %}
 <ul>
     {% for month in months %}
-        <li><a href="{% url 'month-challenges' month%}">{{ month|title }}</a></li>
+        <li><a href="{% url 'month-challenges' month %}">{{ month|title }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}
