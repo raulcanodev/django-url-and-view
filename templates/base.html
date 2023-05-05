@@ -4,16 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ month }}</title>
+    <title>{% block page_title %}Default title{% endblock %}</title>
 </head>
 <body>
-    <h1>This is the {{ month }} challenge</h1>
-
-    {% if text != None %}
-        <h2>{{ text }}</h2>
-    {% else %}
-        <p>Empty month</p>
-    {% endif %}
-
+    {% block content %} {% endblock %}
 </body>
-</html>
