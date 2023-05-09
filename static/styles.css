@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=PT+Mono&family=Roboto+Mono:wght@200&family=Roboto:wght@100&display=swap');
+
+html {
+    font-family: 'PT Mono', monospace;
+    
+}
+
+body {
+    margin: 0px;
+    
+}
+
+a {
+    color: red;
+}

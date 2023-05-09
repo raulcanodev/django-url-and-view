@@ -5,7 +5,7 @@
 
 {% block content %}
 
-    {% include "challenges/includes/header.html" %}
+     {% include "challenges/includes/header.html" %}  {% comment %} Add the back buttom from the header.html {% endcomment %}
 
     <h1>This is the {{ month }} challenge</h1>
 
@@ -14,5 +14,5 @@
     {% else %}
         <p>Empty month</p>
     {% endif %}
-    <a href="{% url 'challenges' %}">Back</a>
+    
 {% endblock %}

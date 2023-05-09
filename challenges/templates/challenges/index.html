@@ -1,10 +1,17 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% comment %} El bloque de css_files hace referencia por el nombre que pusimos en templates/base {% endcomment %}
+{% block css_files %} 
+    <link rel="stylesheet" href="{% static "challenges/challenges.css" %}">
+{% endblock %}
 
 {% block page_title %}
 All challenges
 {% endblock %}
 
 {% block content %}
+
 <ul>
     {% for month in months %}
         <li><a href="{% url 'month-challenges' month %}">{{ month|title }}</a></li>
