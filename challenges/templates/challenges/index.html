@@ -3,14 +3,17 @@
 
 {% comment %} El bloque de css_files hace referencia por el nombre que pusimos en templates/base {% endcomment %}
 {% block css_files %} 
-    <link rel="stylesheet" href="{% static "challenges/challenges.css" %}">
+    <link rel="stylesheet" href="{% static "challenges/index.css" %}">
+    <link rel="stylesheet" href="{% static "challenges/includes/header.css" %}">
 {% endblock %}
 
 {% block page_title %}
-All challenges
+    All challenges
 {% endblock %}
 
 {% block content %}
+
+{% include "challenges/includes/header.html" %}  {% comment %} Add the back buttom from the header.html {% endcomment %}
 
 <ul>
     {% for month in months %}

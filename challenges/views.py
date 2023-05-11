@@ -42,6 +42,7 @@ def monthly_challenge_by_number(request, month):
     # HttpResponseRedirect: You can visit it but actually is not the final real 
     # url, you should be, here is that real url
 
+
 def monthly_challenge(request, month):
     try:
         challenge_text = monthly_challenges[month]
